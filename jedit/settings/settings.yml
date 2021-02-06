@@ -1,0 +1,86 @@
+editor:
+  interactive_elements: 'no'
+  footer_log: 'yes'
+  round:
+    from: 0
+    to: 20
+    default: 6
+  zero_tolerance: 1e-6
+
+default_sizes:
+  board_grid_rows: 18
+  board_grid_cols: 18
+  main_window_rows: 15
+  main_window_cols: 12
+  board_grid_height: '580px'
+  menu_element_description: '100px'
+
+plot_parameters:
+  grid: 'no'
+  aspect: 'auto'
+  height: 4.2
+  width: 6.2
+
+main_function:
+  linestyle: 'solid'
+  linewidth: 1.8
+  color: '#1f77b4'
+
+derivative:
+  linestyle: 'solid'
+  linewidth: 1.5
+  user_max: 3
+  colors: # number of colors must match 'user_max'
+    - '#ff8647'
+    - '#c01e58'
+    - '#7b6cef'
+
+asymptote:
+  linestyle: 'dashed'
+  linewidth: 1
+  color: '#000000'
+
+zero_points:
+  marker: 'kx'
+  markersize: 6.5
+  color: '#000000'
+  iterations: 50
+
+extremes:
+  max_derivative: 10
+  marker: 'o'
+  markersize: 5.5
+  color: '#e32400'
+
+inflex_points:
+  marker: 'o'
+  markersize: 5.5
+  color: '#77bb40'
+
+increasing:
+  linestyle: 'solid'
+  linewidth: 2
+  color: '#33ff4c'
+
+decreasing:
+  linestyle: 'solid'
+  linewidth: 2
+  color: '#E34A27'
+
+concave_up:
+  linestyle: 'solid'
+  linewidth: 2
+  color: '#2B2466'
+
+concave_down:
+  linestyle: 'solid'
+  linewidth: 2
+  color: '#F1C344'
+
+refinement_x:
+  values:
+    - 'pôvodné'
+    - '10'
+    - '100'
+    - '1000'
+    - '10000'
