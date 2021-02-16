@@ -84,7 +84,7 @@
 <li><a class="reference internal" href="#vytvorenie-virtualneho-prostredia">2. Vytvorenie virtuálneho prostredia</a></li>
 <li><a class="reference internal" href="#aktivacia-virtualneho-prostredia">3. Aktivácia virtuálneho prostredia</a></li>
 <li><a class="reference internal" href="#instalacia-potrebnych-programov-kniznic">4. Inštalácia potrebných programov/knižníc</a></li>
-<li><a class="reference internal" href="#spustenie-prostredia-jupyter-notebook">4. Spustenie prostredia Jupyter Notebook</a></li>
+<li><a class="reference internal" href="#spustenie-prostredia-jupyter-notebook">5. Spustenie prostredia Jupyter Notebook</a></li>
 <li><a class="reference internal" href="#instalacia-jedit">5. Inštalácia jedit</a></li>
 </ul>
 </li>
@@ -191,25 +191,23 @@
 <div class="section" id="instalacia-platformy-anaconda">
 <h2>1. Inštalácia platformy Anaconda<a class="headerlink" href="#instalacia-platformy-anaconda" title="Trvalý odkaz na tento nadpis">¶</a></h2>
 <p>Stiahnite a nainštalujte platformu <a class="reference external" href="https://www.anaconda.com/products/individual#Downloads">Anaconda</a> (Linux, MacOS, Windows). Podľa možností zvoľte grafický inštalátor.
-Po nainštalovaní by mal fungovať príkaz <code class="docutils literal notranslate"><span class="pre">conda</span></code> v rámci aplikácie <strong>Terminal</strong> na Linuxe/MacOS, resp. <strong>cmd</strong> na Windowse.</p>
+Po nainštalovaní by mal fungovať príkaz <strong>conda</strong> v rámci aplikácie <strong>Terminal</strong> na Linuxe/MacOS, resp. <strong>cmd</strong> na Windowse.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
 <span class="n">conda</span> <span class="mf">4.9</span><span class="o">.</span><span class="mi">2</span>
 </pre></div>
 </div>
-<p>Ak Windows (cmd) príkaz <code class="docutils literal notranslate"><span class="pre">conda</span></code> nerozoznáva, s inštaláciou Anacondy na Windows by sa mal v ponuke Štart objaviť prispôsobený cmd s názvom <strong>Anaconda Prompt</strong>.
+<p>Ak Windows (cmd) príkaz <strong>conda</strong> nerozoznáva, s inštaláciou Anacondy na Windows by sa mal v ponuke Štart objaviť prispôsobený cmd s názvom <strong>Anaconda Prompt</strong>.
 Vrámci príkazového riadku Anaconda Prompt by mal horeuvedený príkaz fungovať.</p>
 </div>
 <div class="section" id="vytvorenie-virtualneho-prostredia">
 <h2>2. Vytvorenie virtuálneho prostredia<a class="headerlink" href="#vytvorenie-virtualneho-prostredia" title="Trvalý odkaz na tento nadpis">¶</a></h2>
 <p>Je veľmi vhodné vytvoriť si vlastné virtuálne prostredie (environment), ktoré bude obsahovať len nevyhnutné balíky programov pre prácu na laboratóriách.
 Keďže <strong>jedit</strong> nie je sústavne vyvíjaná aplikácia a jej vývoj sa v princípe skončil odovzdaním bakalárskej práce, je vhodné prispôsobiť virtuálne prostredie tým verziam programov, ktoré boli používané v čase odovzdávania a testovania.</p>
-<ul>
-<li><p>Vytvorenie virtuálneho prostredia s názvom (napríklad) <code class="docutils literal notranslate"><span class="pre">analyza</span></code> s predvolenou verziou 3.7.4 jazyka Python:</p>
+<p>Vytvorenie virtuálneho prostredia s názvom (napríklad) <strong>analyza</strong> s predvolenou verziou 3.7.4 jazyka Python:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">analyza</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span><span class="o">.</span><span class="mi">4</span>
 </pre></div>
 </div>
-</li>
-<li><p>Následne sa program spýta, či chcete inštalovať niektoré balíky, čo treba potvrdiť zadaním <strong>y</strong>.</p>
+<p>Následne sa program spýta, či chcete inštalovať niektoré balíky, čo treba potvrdiť zadaním <strong>y</strong>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The following NEW packages will be INSTALLED:
    ca-certificates    pkgs/main/osx-64::ca-certificates-2021.1.19-hecd8cb5_0
    certifi            pkgs/main/osx-64::certifi-2020.12.5-py37hecd8cb5_0
@@ -218,12 +216,10 @@ Keďže <strong>jedit</strong> nie je sústavne vyvíjaná aplikácia a jej výv
 Proceed ([y]/n)? y
 </pre></div>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="aktivacia-virtualneho-prostredia">
 <h2>3. Aktivácia virtuálneho prostredia<a class="headerlink" href="#aktivacia-virtualneho-prostredia" title="Trvalý odkaz na tento nadpis">¶</a></h2>
-<p>Po vytvorení prostredia <code class="docutils literal notranslate"><span class="pre">analyza</span></code> je potrebné ho aktivovať, pričom úspešná aktivácia sa prejaví zmenou názvu pracovného prostredia z <code class="docutils literal notranslate"><span class="pre">(base)</span></code> na <code class="docutils literal notranslate"><span class="pre">(analyza)</span></code>:</p>
+<p>Po vytvorení prostredia <strong>analyza</strong> je potrebné ho aktivovať, pričom úspešná aktivácia sa prejaví zmenou názvu pracovného prostredia z <strong>(base)</strong> na <strong>(analyza)</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">analyza</span>
 <span class="p">(</span><span class="n">analyza</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span>
 </pre></div>
@@ -237,7 +233,7 @@ Proceed ([y]/n)? y
 </div>
 </div>
 <div class="section" id="spustenie-prostredia-jupyter-notebook">
-<h2>4. Spustenie prostredia Jupyter Notebook<a class="headerlink" href="#spustenie-prostredia-jupyter-notebook" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>5. Spustenie prostredia Jupyter Notebook<a class="headerlink" href="#spustenie-prostredia-jupyter-notebook" title="Trvalý odkaz na tento nadpis">¶</a></h2>
 <p>Po nainštalovaní potrebných programov/knižníc spustite program na tvorbu interaktívnych dokumentov <strong>Jupyter Notebook</strong> (otvorí sa v predvolenom internetovom prehliadači):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">analyza</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">jupyter</span> <span class="n">notebook</span>
 </pre></div>
@@ -245,7 +241,7 @@ Proceed ([y]/n)? y
 </div>
 <div class="section" id="instalacia-jedit">
 <h2>5. Inštalácia jedit<a class="headerlink" href="#instalacia-jedit" title="Trvalý odkaz na tento nadpis">¶</a></h2>
-<p>Editor <strong>jedit</strong> nemá vlastný inštalátor, preto ho je potrebné stiahnuť v hornej časti stránky (<strong>tar.gz</strong> alebo <strong>zip</strong>), rozbaliť a ručne nakopírovať (priečinok <code class="docutils literal notranslate"><span class="pre">jedit</span></code>) do akejkoľvek zložky, v ktorej máte vytvorené interaktívne notebooky s funkciami, ktoré chcete analyzovať, napríklad:</p>
+<p>Editor <strong>jedit</strong> nemá vlastný inštalátor, preto ho je potrebné stiahnuť v hornej časti stránky (<strong>tar.gz</strong> alebo <strong>zip</strong>), rozbaliť a ručne nakopírovať (priečinok <strong>jedit</strong>) do akejkoľvek zložky, v ktorej máte vytvorené interaktívne notebooky s funkciami, ktoré chcete analyzovať, napríklad:</p>
 <pre class="literal-block">(analyza) user/projects/cvicenie4 ~ % ls
 
 <strong>jedit</strong>
@@ -256,7 +252,7 @@ pekna_funkcia.ipynb</pre>
 </div>
 <div class="section" id="pouzitie-jedit-v-dokumente-jupyter">
 <h1>Použitie jedit v dokumente Jupyter<a class="headerlink" href="#pouzitie-jedit-v-dokumente-jupyter" title="Trvalý odkaz na tento nadpis">¶</a></h1>
-<p>Na importovanie editora <strong>jedit</strong> v rámci dokumentu Jupyter použite Python príkaz <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">jedit</span> <span class="pre">import</span> <span class="pre">editor</span></code>, napríklad:</p>
+<p>Na importovanie editora <strong>jedit</strong> v rámci dokumentu Jupyter použite Python príkaz <strong>from jedit import editor</strong>, napríklad:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
@@ -272,13 +268,13 @@ pekna_funkcia.ipynb</pre>
 <span class="o">...</span>
 </pre></div>
 </div>
-<p>sa samotný editor spúšťa zavolaním funkcie <code class="docutils literal notranslate"><span class="pre">editor()</span></code>, ktorá vyžaduje tzv. keyword argumenty <code class="docutils literal notranslate"><span class="pre">**params</span></code>:</p>
+<p>sa samotný editor spúšťa zavolaním funkcie <strong>editor()</strong>, ktorá vyžaduje tzv. keyword argumenty:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">editor</span><span class="p">(</span><span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">function</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">intervals</span><span class="o">=</span><span class="p">[</span><span class="n">X1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">Xn</span><span class="p">],</span> <span class="n">primes</span><span class="o">=</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">pn</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>kde <code class="docutils literal notranslate"><span class="pre">figure,</span> <span class="pre">axes,</span> <span class="pre">intervals</span></code> sú povinné argumenty a <code class="docutils literal notranslate"><span class="pre">primes</span></code> nepovinný a znamená užívateľom definované funkcie derivácií (zadané poradie zároveň definuje ich stupeň).
-Hodnoty pre kľúče <code class="docutils literal notranslate"><span class="pre">intervals,</span> <span class="pre">primes</span></code> treba zadávať v zoznamoch (<code class="docutils literal notranslate"><span class="pre">list</span></code>), aj keď užívateľ definuje len jednu hodnotu.
-Editor je možné spustiť aj v tzv. <code class="docutils literal notranslate"><span class="pre">default</span></code> móde s vopred definovanými funkciami, a to bez parametrov:</p>
+<p>kde <strong>figure</strong>, <strong>axes</strong>, <strong>intervals</strong> sú povinné argumenty a <strong>primes</strong> nepovinný a znamená užívateľom definované funkcie derivácií (zadané poradie zároveň definuje ich stupeň).
+Hodnoty pre kľúče <strong>interval</strong>, <strong>primes</strong> treba zadávať v zoznamoch (list), aj keď užívateľ definuje len jednu hodnotu.</p>
+<p>Editor je možné spustiť aj v tzv. <strong>default</strong> móde s vopred definovanými funkciami, a to bez parametrov:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">editor</span><span class="p">()</span>
 </pre></div>
 </div>
