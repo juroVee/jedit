@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sk" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Základné informácie &mdash; Dokumentácia jedit 1.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Hľadať" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> jedit
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Základné informácie</a></li>
+<li><a class="reference internal" href="#instalacne-pokyny">Inštalačné pokyny</a><ul>
+<li><a class="reference internal" href="#instalacia-platformy-anaconda">1. Inštalácia platformy Anaconda</a></li>
+<li><a class="reference internal" href="#vytvorenie-virtualneho-prostredia">2. Vytvorenie virtuálneho prostredia</a></li>
+<li><a class="reference internal" href="#aktivacia-virtualneho-prostredia">3. Aktivácia virtuálneho prostredia</a></li>
+<li><a class="reference internal" href="#instalacia-potrebnych-programov-kniznic">4. Inštalácia potrebných programov/knižníc</a></li>
+<li><a class="reference internal" href="#spustenie-prostredia-jupyter-notebook">4. Spustenie prostredia Jupyter Notebook</a></li>
+<li><a class="reference internal" href="#instalacia-jedit">5. Inštalácia jedit</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pouzitie-jedit-v-dokumente-jupyter">Použitie jedit v dokumente Jupyter</a></li>
+<li><a class="reference internal" href="#z-aplikacie">Z aplikácie</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">jedit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Základné informácie</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zakladne-informacie">
+<h1>Základné informácie<a class="headerlink" href="#zakladne-informacie" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">Odkazy/Na stiahnutie</p>
+<div class="line-block">
+<div class="line"><strong>Repozitár programu</strong></div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/juroVee/jedit">GitHub</a></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Aktuálna verzia programu</strong></div>
+<div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="_downloads/6726160d2da711929eee9752d2df41fc/jedit-1-0-1.tar.gz"><code class="xref download docutils literal notranslate"><span class="pre">tar.gz</span> <span class="pre">(1.0.1)</span></code></a></div>
+<div class="line"><a class="reference download internal" download="" href="_downloads/814064a585fec550c82d6249ae5188a9/jedit-1-0-1.zip"><code class="xref download docutils literal notranslate"><span class="pre">zip</span> <span class="pre">(1.0.1)</span></code></a></div>
+</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>SK</strong></div>
+<div class="line-block">
+<div class="line">Editor pre interaktívne vyšetrovanie priebehu elementárnych funkcií vo výpočtovom prostredí IPython/Jupyter. Tento program bol vytvorený ako súčasť bakalárskej práce autora.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>EN</strong></div>
+<div class="line-block">
+<div class="line"><em>Editor which allows interactive exploration of the properties of elementary functions in the computing environment IPython/Jupyter. The program has been created as a part of author’s bachelor thesis.</em></div>
+</div>
+</div>
+</div>
+<div class="section" id="instalacne-pokyny">
+<h1>Inštalačné pokyny<a class="headerlink" href="#instalacne-pokyny" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="section" id="instalacia-platformy-anaconda">
+<h2>1. Inštalácia platformy Anaconda<a class="headerlink" href="#instalacia-platformy-anaconda" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Stiahnite a nainštalujte platformu <a class="reference external" href="https://www.anaconda.com/products/individual#Downloads">Anaconda</a> (Linux, MacOS, Windows). Podľa možností zvoľte grafický inštalátor.
+Po nainštalovaní by mal fungovať príkaz <code class="docutils literal notranslate"><span class="pre">conda</span></code> v rámci aplikácie <strong>Terminal</strong> na Linuxe/MacOS, resp. <strong>cmd</strong> na Windowse.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">conda</span> <span class="mf">4.9</span><span class="o">.</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>Ak Windows (cmd) príkaz <code class="docutils literal notranslate"><span class="pre">conda</span></code> nerozoznáva, s inštaláciou Anacondy na Windows by sa mal v ponuke Štart objaviť prispôsobený cmd s názvom <strong>Anaconda Prompt</strong>.
+Vrámci príkazového riadku Anaconda Prompt by mal horeuvedený príkaz fungovať.</p>
+</div>
+<div class="section" id="vytvorenie-virtualneho-prostredia">
+<h2>2. Vytvorenie virtuálneho prostredia<a class="headerlink" href="#vytvorenie-virtualneho-prostredia" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Je veľmi vhodné vytvoriť si vlastné virtuálne prostredie (environment), ktoré bude obsahovať len nevyhnutné balíky programov pre prácu na laboratóriách.
+Keďže <strong>jedit</strong> nie je sústavne vyvíjaná aplikácia a jej vývoj sa v princípe skončil odovzdaním bakalárskej práce, je vhodné prispôsobiť virtuálne prostredie tým verziam programov, ktoré boli používané v čase odovzdávania a testovania.</p>
+<ul>
+<li><p>Vytvorenie virtuálneho prostredia s názvom (napríklad) <code class="docutils literal notranslate"><span class="pre">analyza</span></code> s predvolenou verziou 3.7.4 jazyka Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">analyza</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span><span class="o">.</span><span class="mi">4</span>
+</pre></div>
+</div>
+</li>
+<li><p>Následne sa program spýta, či chcete inštalovať niektoré balíky, čo treba potvrdiť zadaním <strong>y</strong>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The following NEW packages will be INSTALLED:
+   ca-certificates    pkgs/main/osx-64::ca-certificates-2021.1.19-hecd8cb5_0
+   certifi            pkgs/main/osx-64::certifi-2020.12.5-py37hecd8cb5_0
+   ...
+
+Proceed ([y]/n)? y
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="aktivacia-virtualneho-prostredia">
+<h2>3. Aktivácia virtuálneho prostredia<a class="headerlink" href="#aktivacia-virtualneho-prostredia" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Po vytvorení prostredia <code class="docutils literal notranslate"><span class="pre">analyza</span></code> je potrebné ho aktivovať, pričom úspešná aktivácia sa prejaví zmenou názvu pracovného prostredia z <code class="docutils literal notranslate"><span class="pre">(base)</span></code> na <code class="docutils literal notranslate"><span class="pre">(analyza)</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">analyza</span>
+<span class="p">(</span><span class="n">analyza</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacia-potrebnych-programov-kniznic">
+<h2>4. Inštalácia potrebných programov/knižníc<a class="headerlink" href="#instalacia-potrebnych-programov-kniznic" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Do prostredia bol pri jeho vytváraní pridaný aj program pre správu balíkov <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Teraz je pomocou neho potrebné do prostredia nainštalovať všetky knižnice pre prácu na laboratóriach (v spomínaných vývojových verziách):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">analyza</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">notebook</span><span class="o">==</span><span class="mf">6.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">pyyaml</span><span class="o">==</span><span class="mf">5.1</span><span class="o">.</span><span class="mi">2</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.17</span><span class="o">.</span><span class="mi">2</span> <span class="n">matplotlib</span><span class="o">==</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span> <span class="n">scipy</span><span class="o">==</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">0</span> <span class="n">ipywidgets</span><span class="o">==</span><span class="mf">7.5</span><span class="o">.</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="spustenie-prostredia-jupyter-notebook">
+<h2>4. Spustenie prostredia Jupyter Notebook<a class="headerlink" href="#spustenie-prostredia-jupyter-notebook" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Po nainštalovaní potrebných programov/knižníc spustite program na tvorbu interaktívnych dokumentov <strong>Jupyter Notebook</strong> (otvorí sa v predvolenom internetovom prehliadači):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">analyza</span><span class="p">)</span> <span class="n">user</span> <span class="o">~</span> <span class="o">%</span> <span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="instalacia-jedit">
+<h2>5. Inštalácia jedit<a class="headerlink" href="#instalacia-jedit" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Editor <strong>jedit</strong> nemá vlastný inštalátor, preto ho je potrebné stiahnuť v hornej časti stránky (<strong>tar.gz</strong> alebo <strong>zip</strong>), rozbaliť a ručne nakopírovať (priečinok <code class="docutils literal notranslate"><span class="pre">jedit</span></code>) do akejkoľvek zložky, v ktorej máte vytvorené interaktívne notebooky s funkciami, ktoré chcete analyzovať, napríklad:</p>
+<pre class="literal-block">(analyza) user/projects/cvicenie4 ~ % ls
+
+<strong>jedit</strong>
+linearna_funkcia.ipynb
+kvadraticka_funkcia.ipynb
+pekna_funkcia.ipynb</pre>
+</div>
+</div>
+<div class="section" id="pouzitie-jedit-v-dokumente-jupyter">
+<h1>Použitie jedit v dokumente Jupyter<a class="headerlink" href="#pouzitie-jedit-v-dokumente-jupyter" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Na importovanie editora <strong>jedit</strong> v rámci dokumentu Jupyter použite Python príkaz <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">jedit</span> <span class="pre">import</span> <span class="pre">editor</span></code>, napríklad:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+<span class="o">...</span>
+<span class="kn">from</span> <span class="nn">jedit</span> <span class="kn">import</span> <span class="n">editor</span>
+</pre></div>
+</div>
+<p>Po nevyhnutných definíciách funkcií,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">X</span> <span class="o">=</span> <span class="o">...</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>sa samotný editor spúšťa zavolaním funkcie <code class="docutils literal notranslate"><span class="pre">editor()</span></code>, ktorá vyžaduje tzv. keyword argumenty <code class="docutils literal notranslate"><span class="pre">**params</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">editor</span><span class="p">(</span><span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">function</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">intervals</span><span class="o">=</span><span class="p">[</span><span class="n">X1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">Xn</span><span class="p">],</span> <span class="n">primes</span><span class="o">=</span><span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">pn</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>kde <code class="docutils literal notranslate"><span class="pre">figure,</span> <span class="pre">axes,</span> <span class="pre">intervals</span></code> sú povinné argumenty a <code class="docutils literal notranslate"><span class="pre">primes</span></code> nepovinný a znamená užívateľom definované funkcie derivácií (zadané poradie zároveň definuje ich stupeň).
+Hodnoty pre kľúče <code class="docutils literal notranslate"><span class="pre">intervals,</span> <span class="pre">primes</span></code> treba zadávať v zoznamoch (<code class="docutils literal notranslate"><span class="pre">list</span></code>), aj keď užívateľ definuje len jednu hodnotu.
+Editor je možné spustiť aj v tzv. <code class="docutils literal notranslate"><span class="pre">default</span></code> móde s vopred definovanými funkciami, a to bez parametrov:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">editor</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="z-aplikacie">
+<h1>Z aplikácie<a class="headerlink" href="#z-aplikacie" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="figure align-center">
+<img alt="_images/screen02.png" src="_images/screen02.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen03.png" src="_images/screen03.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen04.png" src="_images/screen04.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen05.png" src="_images/screen05.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen06.png" src="_images/screen06.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen07.png" src="_images/screen07.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen08.png" src="_images/screen08.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen09.png" src="_images/screen09.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen10.png" src="_images/screen10.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen11.png" src="_images/screen11.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen12.png" src="_images/screen12.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen13.png" src="_images/screen13.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/screen14.png" src="_images/screen14.png" />
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, juroVee.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+.. Bachelor Thesis documentation master file, created by
+   sphinx-quickstart on Tue Oct 15 16:49:20 2019.
+
+Základné informácie
+===================
+
+.. _GitHub: https://github.com/juroVee/jedit
+.. _Anaconda: https://www.anaconda.com/products/individual#Downloads
+
+.. sidebar:: Odkazy/Na stiahnutie
+
+   | **Repozitár programu**
+   |    GitHub_
+
+   | **Aktuálna verzia programu**
+   |    :download:`tar.gz (1.0.1) <files/release/jedit-1-0-1.tar.gz>`
+   |    :download:`zip (1.0.1) <files/release/jedit-1-0-1.zip>`
+
+| **SK**
+|   Editor pre interaktívne vyšetrovanie priebehu elementárnych funkcií vo výpočtovom prostredí IPython/Jupyter. Tento program bol vytvorený ako súčasť bakalárskej práce autora.
+
+| **EN**
+|   *Editor which allows interactive exploration of the properties of elementary functions in the computing environment IPython/Jupyter. The program has been created as a part of author's bachelor thesis.*
+
+
+Inštalačné pokyny
+=================
+
+1. Inštalácia platformy Anaconda
+--------------------------------
+
+Stiahnite a nainštalujte platformu Anaconda_ (Linux, MacOS, Windows). Podľa možností zvoľte grafický inštalátor.
+Po nainštalovaní by mal fungovať príkaz ``conda`` v rámci aplikácie **Terminal** na Linuxe/MacOS, resp. **cmd** na Windowse.
+
+.. parsed-literal::
+    (base) user ~ % conda --version
+    conda 4.9.2
+
+Ak Windows (cmd) príkaz ``conda`` nerozoznáva, s inštaláciou Anacondy na Windows by sa mal v ponuke Štart objaviť prispôsobený cmd s názvom **Anaconda Prompt**.
+Vrámci príkazového riadku Anaconda Prompt by mal horeuvedený príkaz fungovať.
+
+2. Vytvorenie virtuálneho prostredia
+------------------------------------
+
+Je veľmi vhodné vytvoriť si vlastné virtuálne prostredie (environment), ktoré bude obsahovať len nevyhnutné balíky programov pre prácu na laboratóriách.
+Keďže **jedit** nie je sústavne vyvíjaná aplikácia a jej vývoj sa v princípe skončil odovzdaním bakalárskej práce, je vhodné prispôsobiť virtuálne prostredie tým verziam programov, ktoré boli používané v čase odovzdávania a testovania.
+
+- Vytvorenie virtuálneho prostredia s názvom (napríklad) ``analyza`` s predvolenou verziou 3.7.4 jazyka Python:
+
+  .. parsed-literal::
+     (base) user ~ % conda create --name analyza python=3.7.4
+
+- Následne sa program spýta, či chcete inštalovať niektoré balíky, čo treba potvrdiť zadaním **y**.
+
+  .. parsed-literal::
+     The following NEW packages will be INSTALLED:
+        ca-certificates    pkgs/main/osx-64::ca-certificates-2021.1.19-hecd8cb5_0
+        certifi            pkgs/main/osx-64::certifi-2020.12.5-py37hecd8cb5_0
+        ...
+
+     Proceed ([y]/n)? y
+
+3. Aktivácia virtuálneho prostredia
+-----------------------------------
+
+Po vytvorení prostredia ``analyza`` je potrebné ho aktivovať, pričom úspešná aktivácia sa prejaví zmenou názvu pracovného prostredia z ``(base)`` na ``(analyza)``:
+
+.. parsed-literal::
+   (base) user ~ % conda activate analyza
+   (analyza) user ~ %
+
+4. Inštalácia potrebných programov/knižníc
+------------------------------------------
+
+Do prostredia bol pri jeho vytváraní pridaný aj program pre správu balíkov ``pip``. Teraz je pomocou neho potrebné do prostredia nainštalovať všetky knižnice pre prácu na laboratóriach (v spomínaných vývojových verziách):
+
+.. parsed-literal::
+   (analyza) user ~ % pip install notebook==6.0.1 pyyaml==5.1.2 numpy==1.17.2 matplotlib==3.1.2 scipy==1.4.0 ipywidgets==7.5.1
+
+4. Spustenie prostredia Jupyter Notebook
+----------------------------------------
+
+Po nainštalovaní potrebných programov/knižníc spustite program na tvorbu interaktívnych dokumentov **Jupyter Notebook** (otvorí sa v predvolenom internetovom prehliadači):
+
+.. parsed-literal::
+   (analyza) user ~ % jupyter notebook
+
+5. Inštalácia jedit
+-------------------
+
+Editor **jedit** nemá vlastný inštalátor, preto ho je potrebné stiahnuť v hornej časti stránky (**tar.gz** alebo **zip**), rozbaliť a ručne nakopírovať (priečinok ``jedit``) do akejkoľvek zložky, v ktorej máte vytvorené interaktívne notebooky s funkciami, ktoré chcete analyzovať, napríklad:
+
+.. parsed-literal::
+  (analyza) user/projects/cvicenie4 ~ % ls
+
+  **jedit**
+  linearna_funkcia.ipynb
+  kvadraticka_funkcia.ipynb
+  pekna_funkcia.ipynb
+
+Použitie jedit v dokumente Jupyter
+==================================
+
+Na importovanie editora **jedit** v rámci dokumentu Jupyter použite Python príkaz ``from jedit import editor``, napríklad:
+
+.. code-block:: python
+
+   ...
+   import matplotlib.pyplot as plt
+   %matplotlib notebook
+   ...
+   from jedit import editor
+
+Po nevyhnutných definíciách funkcií,
+
+.. parsed-literal::
+  ...
+  X = ...
+  def f(x) = ...
+  fig, ax = plt.subplots()
+  ...
+
+sa samotný editor spúšťa zavolaním funkcie ``editor()``, ktorá vyžaduje tzv. keyword argumenty ``**params``:
+
+.. code-block:: python
+
+   editor(figure=fig, axes=ax, function=f, intervals=[X1, ..., Xn], primes=[p1, ..., pn])
+
+kde ``figure, axes, intervals`` sú povinné argumenty a ``primes`` nepovinný a znamená užívateľom definované funkcie derivácií (zadané poradie zároveň definuje ich stupeň).
+Hodnoty pre kľúče ``intervals, primes`` treba zadávať v zoznamoch (``list``), aj keď užívateľ definuje len jednu hodnotu.
+Editor je možné spustiť aj v tzv. ``default`` móde s vopred definovanými funkciami, a to bez parametrov:
+
+.. code-block:: python
+
+   editor()
+
+Z aplikácie
+===========
+
+.. figure:: images/screen02.png
+   :align: center
+
+.. figure:: images/screen03.png
+   :align: center
+
+.. figure:: images/screen04.png
+   :align: center
+
+.. figure:: images/screen05.png
+   :align: center
+
+.. figure:: images/screen06.png
+   :align: center
+
+.. figure:: images/screen07.png
+   :align: center
+
+.. figure:: images/screen08.png
+   :align: center
+
+.. figure:: images/screen09.png
+   :align: center
+
+.. figure:: images/screen10.png
+   :align: center
+
+.. figure:: images/screen11.png
+   :align: center
+
+.. figure:: images/screen12.png
+   :align: center
+
+.. figure:: images/screen13.png
+   :align: center
+
+.. figure:: images/screen14.png
+   :align: center
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Základné informácie
