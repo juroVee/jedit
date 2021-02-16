@@ -1,20 +1,20 @@
 .. Bachelor Thesis documentation master file, created by
    sphinx-quickstart on Tue Oct 15 16:49:20 2019.
 
-Základné informácie
-===================
+jedit 1.0.1
+===========
 
 .. _GitHub: https://github.com/juroVee/jedit
 .. _Anaconda: https://www.anaconda.com/products/individual#Downloads
 
 .. sidebar:: Odkazy/Na stiahnutie
 
-   | **Repozitár programu**
+   | **Repo**
    |    GitHub_
 
-   | **Aktuálna verzia programu**
-   |    :download:`tar.gz (1.0.1) <files/release/jedit-1-0-1.tar.gz>`
-   |    :download:`zip (1.0.1) <files/release/jedit-1-0-1.zip>`
+   | **Releases**
+   |    :download:`tar.gz (1.0.1 stable) <files/release/jedit-1-0-1.tar.gz>`
+   |    :download:`zip (1.0.1 stable) <files/release/jedit-1-0-1.zip>`
 
 | **SK**
 |   Editor pre interaktívne vyšetrovanie priebehu elementárnych funkcií vo výpočtovom prostredí IPython/Jupyter. Tento program bol vytvorený ako súčasť bakalárskej práce autora.
@@ -36,13 +36,15 @@ Po nainštalovaní by mal fungovať príkaz **conda** v rámci aplikácie **Term
     (base) user ~ % conda --version
     conda 4.9.2
 
-Ak Windows (cmd) príkaz **conda** nerozoznáva, s inštaláciou Anacondy na Windows by sa mal v ponuke Štart objaviť prispôsobený cmd s názvom **Anaconda Prompt**.
-Vrámci príkazového riadku Anaconda Prompt by mal horeuvedený príkaz fungovať.
+.. admonition:: Windows
+
+   Ak Windows (cmd) príkaz **conda** nerozoznáva, s inštaláciou Anacondy na Windows by sa mal v ponuke Štart objaviť prispôsobený príkazový riadok s názvom **Anaconda Prompt**.
+   V rámci tohto príkazového riadku Anaconda Prompt by mal vyššie uvedený príkaz fungovať.
 
 2. Vytvorenie virtuálneho prostredia
 ------------------------------------
 
-Je veľmi vhodné vytvoriť si vlastné virtuálne prostredie (environment), ktoré bude obsahovať len nevyhnutné balíky programov pre prácu na laboratóriách.
+Je veľmi vhodné vytvoriť si vlastné **virtuálne prostredie** (environment), ktoré bude obsahovať len nevyhnutné balíky programov pre prácu na laboratóriách.
 Keďže **jedit** nie je sústavne vyvíjaná aplikácia a jej vývoj sa v princípe skončil odovzdaním bakalárskej práce, je vhodné prispôsobiť virtuálne prostredie tým verziam programov, ktoré boli používané v čase odovzdávania a testovania.
 
 Vytvorenie virtuálneho prostredia s názvom (napríklad) **analyza** s predvolenou verziou 3.7.4 jazyka Python:
@@ -126,8 +128,8 @@ sa samotný editor spúšťa zavolaním funkcie **editor()**, ktorá vyžaduje t
 
    editor(figure=fig, axes=ax, function=f, intervals=[X1, ..., Xn], primes=[p1, ..., pn])
 
-kde **figure**, **axes**, **intervals** sú povinné argumenty a **primes** nepovinný a znamená užívateľom definované funkcie derivácií (zadané poradie zároveň definuje ich stupeň).
-Hodnoty pre kľúče **interval**, **primes** treba zadávať v zoznamoch (list), aj keď užívateľ definuje len jednu hodnotu.
+kde **figure**, **axes**, **function**, **intervals** sú povinné argumenty a **primes** nepovinný a znamená užívateľom definované funkcie derivácií (zadané poradie zároveň definuje ich stupeň).
+Hodnoty pre kľúče **interval**, **primes** treba zadávať v zoznamoch (python list), aj keď užívateľ definuje len jednu hodnotu.
 
 Editor je možné spustiť aj v tzv. **default** móde s vopred definovanými funkciami, a to bez parametrov:
 
