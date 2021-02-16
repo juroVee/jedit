@@ -74,7 +74,7 @@ Po vytvorení prostredia **analyza** je potrebné ho aktivovať, pričom úspeš
 4. Inštalácia potrebných programov/knižníc
 ------------------------------------------
 
-Teraz je potrebné do prostredia nainštalovať všetky knižnice pre prácu na laboratóriach (v spomínaných vývojových verziách):
+Teraz je potrebné do prostredia nainštalovať všetky balíky/knižnice pre prácu na laboratóriach (v spomínaných vývojových verziách):
 
 .. parsed-literal::
    (analyza) user ~ % conda install notebook==6.0.1 pyyaml==5.1.2 numpy==1.17.2 matplotlib==3.1.2 scipy==1.4.0 ipywidgets==7.5.1
