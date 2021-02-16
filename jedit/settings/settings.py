@@ -30,7 +30,7 @@ class Settings:
     """
 
     def __init__(self):
-        with open('jedit/settings/settings.yml', 'r') as yml:
+        with open('jedit/settings/settings.yml', 'r', encoding='utf8') as yml:
             self.data = yaml.load(yml, Loader=yaml.FullLoader)
 
     def get_data(self):
